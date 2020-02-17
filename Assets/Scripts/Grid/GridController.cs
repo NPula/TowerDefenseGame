@@ -16,38 +16,48 @@ public class GridController : MonoBehaviour
     {
         highLightImage = Instantiate(highLightImage, transform.position, Quaternion.identity);
         highLightImage.SetActive(false);
+
+        // Create the main grid for renderering all objects.
         grid = new WorldGrid(Width, Height);
         for (int i = 0; i < grid.Width; i++)
         {
             for (int j = 0; j < grid.Height; j++)
             {
+                // Create the inital game objects used for rendering the grid and the towers
                 GameObject tileBlock = new GameObject(i.ToString() + ", " + j.ToString());
-                GameObject tileBord = new GameObject("Border");
-                GameObject tileObj = new GameObject("Tile");
+                GameObject tileBorder = new GameObject("Border");
+                GameObject tileObject = new GameObject("Tile");
+
+                // Set the position of the grid cells on the screen. (Centered)
+                tileBorder.transform.position = new Vector3(i - ((grid.Width - 1f) / 2), j - ((grid.Height - 1f) / 2), 0);
+                tileObject.transform.position = new Vector3(i - ((grid.Width - 1f) / 2), j - ((grid.Height - 1f) / 2), 0);
                 
-                tileBord.transform.position = new Vector3(i - ((grid.Width - 1f) / 2), j - ((grid.Height - 1f) / 2), 0);
-                tileObj.transform.position = new Vector3(i - ((grid.Width - 1f) / 2), j - ((grid.Height - 1f) / 2), 0);
+                // Create the sprite renderers for holding the sprites
+                SpriteRenderer tileBorderRenderer = tileBorder.AddComponent<SpriteRenderer>();
+                SpriteRenderer TileObjRenderer    = tileObject.AddComponent<SpriteRenderer>();
                 
-                SpriteRenderer tileBorderRenderer = tileBord.AddComponent<SpriteRenderer>();
-                SpriteRenderer TileObjRenderer    = tileObj.AddComponent<SpriteRenderer>();
-                //tileBorderRenderer.sortingLayerName = "Grid";
-                
-                tileBord.transform.SetParent(tileBlock.transform);
-                tileObj.transform.SetParent(tileBlock.transform);
+                // Set the layers rendering order. (Might not be necessary in this case.)
+                tileBorderRenderer.sortingLayerName = "Grid Border";
+                TileObjRenderer.sortingLayerName = "Grid Object";
+
+                // Just used for organizing game objects in the editor.
+                tileBorder.transform.SetParent(tileBlock.transform);
+                tileObject.transform.SetParent(tileBlock.transform);
                 tileBlock.transform.SetParent(transform);
 
-                print(grid.Width + " ," + grid.Height);
                 GridTile t = grid.GetTile(i, j);
                 if (t.TileBorder == null)
                 {
+                    // Set the current tile grid sprite
                     t.TileBorder = gridImage;
-                    //t.TileBorder.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, .25f);
+
+                    // Render initial border tiles to the screen (Make them black and slightly transparent)
                     tileBorderRenderer.sprite = t.TileBorder.GetComponent<SpriteRenderer>().sprite;
                     tileBorderRenderer.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, .25f);
-                    //Instantiate(gridImage, tileObj.transform.position, Quaternion.identity);
                 }
 
-                t.RegisterCB((GridTile) => { OnGridCellUpdated(t, tileBord, tileObj); });
+                // Pass the grid objects created to update function so we can update the grid later. Register the callback.
+                t.RegisterCB((GridTile) => { OnGridCellUpdated(t, tileBorder, tileObject); });
             }
         }
     }
@@ -61,9 +71,6 @@ public class GridController : MonoBehaviour
         {
             mouseCellPos = GetMousePositionInGrid();
             grid.SetTileType((int)mouseCellPos.x, (int)mouseCellPos.y, tower[0]);
-            //GameObject tile = new GameObject();
-            //tile.AddComponent<SpriteRenderer>().sprite = tower[0].GetComponent<SpriteRenderer>().sprite;
-            //tile.transform.position = MouseToTilePosition(mouseCellPos);
         }
     }
 
@@ -110,18 +117,8 @@ public class GridController : MonoBehaviour
 
     void OnGridCellUpdated(GridTile tile, GameObject goBorder, GameObject goTile)
     {
-        //if (tile.TileObject == tower[0])
-        //{
-        //goBorder.GetComponent<SpriteRenderer>().sprite = gridImage.GetComponent<SpriteRenderer>().sprite;
         goTile.GetComponent<SpriteRenderer>().sprite = tower[0].GetComponent<SpriteRenderer>().sprite;
         Debug.Log(goTile);
-        //go.GetComponent<SpriteRenderer>().sprite = ;
-        //}
-        //else
-        //    go.GetComponent<SpriteRenderer>().sprite = black; */
-
-        //if (tile.TType == GridTile.TileType.green)
-        //    go.GetComponent<SpriteRenderer>().sprite = green;
     }
 
     void HighlightGridWhenMousedOver()
