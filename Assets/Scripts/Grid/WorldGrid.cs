@@ -39,6 +39,6 @@ public class WorldGrid
 
     public void SetTileBorder(int x, int y, GameObject border)
     {
-        tiles[x, y].BorderObject = border;
+        tiles[x, y].TileBorder = border;
     }
 }

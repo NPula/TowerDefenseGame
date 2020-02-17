@@ -7,7 +7,8 @@ using UnityEngine;
 public class GridTile //: MonoBehaviour
 {
     float x, y; // position of the tile in the grid
-    private GameObject tileObject, borderObject;
+    Action<GridTile> cb;
+    private GameObject tileObject, tileBorder;
     public GameObject TileObject
     {
         get
@@ -21,25 +22,27 @@ public class GridTile //: MonoBehaviour
 
             if (old != tileObject)
             {
-                //UpdateGrid();
+                // Update Grid;
+                cb(this);
             }
         }
     }
     
-    public GameObject BorderObject
+    public GameObject TileBorder
     {
         get
         {
-            return borderObject;
+            return tileBorder;
         }
         set
         {
-            GameObject old = borderObject;
-            borderObject = value;
+            GameObject old = tileBorder;
+            tileBorder = value;
 
             if (old != tileObject)
             {
-                //UpdateGrid();
+                // Update Grid;
+                cb(this);
             }
         }
     }
@@ -47,6 +50,11 @@ public class GridTile //: MonoBehaviour
     public GridTile()
     {
         tileObject = null;
-        borderObject = null;
+        tileBorder = null;
+    }
+
+    public void RegisterCB(Action<GridTile> cb)
+    {
+        this.cb += cb;
     }
 }

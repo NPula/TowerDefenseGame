@@ -6,40 +6,48 @@ public class GridController : MonoBehaviour
 {
     [SerializeField] private int Width = 10, Height = 10;
     private WorldGrid grid;
-    public GameObject black;
+    public GameObject gridImage;
+    public GameObject highLightImage;
+    public GameObject[] tower;
 
     private Vector3 mouseCellPos;          // The grid cell the mouse is currently in.
-    private Vector3 prevMouseCellPosition;
-
-    private Vector3 highlightPos;
-    private Vector3 prevHighlightPos;
-
-    bool mouseButtonDown = false;
 
     void Start()
     {
+        highLightImage = Instantiate(highLightImage, transform.position, Quaternion.identity);
+        highLightImage.SetActive(false);
         grid = new WorldGrid(Width, Height);
         for (int i = 0; i < grid.Width; i++)
         {
             for (int j = 0; j < grid.Height; j++)
             {
-                GameObject tileObj = new GameObject(i.ToString() + ", " + j.ToString());
+                GameObject tileBlock = new GameObject(i.ToString() + ", " + j.ToString());
+                GameObject tileBord = new GameObject("Border");
+                GameObject tileObj = new GameObject("Tile");
+                
+                tileBord.transform.position = new Vector3(i - ((grid.Width - 1f) / 2), j - ((grid.Height - 1f) / 2), 0);
                 tileObj.transform.position = new Vector3(i - ((grid.Width - 1f) / 2), j - ((grid.Height - 1f) / 2), 0);
-                SpriteRenderer tileBorderRenderer = tileObj.AddComponent<SpriteRenderer>();
-                tileBorderRenderer.sortingLayerName = "Grid";
-                tileObj.transform.SetParent(transform);
+                
+                SpriteRenderer tileBorderRenderer = tileBord.AddComponent<SpriteRenderer>();
+                SpriteRenderer TileObjRenderer    = tileObj.AddComponent<SpriteRenderer>();
+                //tileBorderRenderer.sortingLayerName = "Grid";
+                
+                tileBord.transform.SetParent(tileBlock.transform);
+                tileObj.transform.SetParent(tileBlock.transform);
+                tileBlock.transform.SetParent(transform);
 
                 print(grid.Width + " ," + grid.Height);
                 GridTile t = grid.GetTile(i, j);
-                if (t.TileObject == null)
+                if (t.TileBorder == null)
                 {
-                    tileBorderRenderer.sprite = black.GetComponent<SpriteRenderer>().sprite;
-                    tileBorderRenderer.color = new Color(0f,0f,0f,.25f);
+                    t.TileBorder = gridImage;
+                    //t.TileBorder.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, .25f);
+                    tileBorderRenderer.sprite = t.TileBorder.GetComponent<SpriteRenderer>().sprite;
+                    tileBorderRenderer.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, .25f);
+                    //Instantiate(gridImage, tileObj.transform.position, Quaternion.identity);
                 }
-                //else
-                //    tileBorderRenderer.sprite = black; 
 
-                //t.RegisterCB((GridTile) => { OnGridCellUpdated(t, tileObj); });
+                t.RegisterCB((GridTile) => { OnGridCellUpdated(t, tileBord, tileObj); });
             }
         }
     }
@@ -47,74 +55,16 @@ public class GridController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //HighlightGridWhenMousedOver();
+        HighlightGridWhenMousedOver();
 
         if (Input.GetMouseButtonDown(0))
         {
-            mouseButtonDown = true;
-            // set mouse position
             mouseCellPos = GetMousePositionInGrid();
-            highlightPos = mouseCellPos;
-            prevMouseCellPosition = mouseCellPos;
-            //HighlightGridWhenMousedOver();
+            grid.SetTileType((int)mouseCellPos.x, (int)mouseCellPos.y, tower[0]);
             //GameObject tile = new GameObject();
-            //tile.AddComponent<SpriteRenderer>().sprite = green;
+            //tile.AddComponent<SpriteRenderer>().sprite = tower[0].GetComponent<SpriteRenderer>().sprite;
             //tile.transform.position = MouseToTilePosition(mouseCellPos);
         }
-        /*if (mouseButtonDown)
-        {
-            prevHighlightPos = highlightPos;
-            highlightPos = GetMousePositionInGrid();
-            for (int x = (int)prevMouseCellPosition.x; x <= (int)mouseCellPos.x; x++)
-            {
-                for (int y = (int)prevMouseCellPosition.y; y <= (int)mouseCellPos.y; y++)
-                {
-                    HighlightGridAtPos(new Vector3(x, y));
-                }
-            }
-        }*/ 
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            mouseButtonDown = false;
-            prevMouseCellPosition = mouseCellPos;
-            mouseCellPos = GetMousePositionInGrid();
-
-            if (prevMouseCellPosition.x > mouseCellPos.x)
-            {
-                Vector3 tmp = prevMouseCellPosition;
-                prevMouseCellPosition = new Vector3(mouseCellPos.x, prevMouseCellPosition.y);
-                mouseCellPos = new Vector3(tmp.x, mouseCellPos.y);
-            }
-            if (prevMouseCellPosition.y > mouseCellPos.y)
-            {
-                Vector3 tmp = prevMouseCellPosition;
-                prevMouseCellPosition = new Vector3(prevMouseCellPosition.x, mouseCellPos.y);
-                mouseCellPos = new Vector3(mouseCellPos.x, tmp.y);
-            }
-            for (int x = (int)prevMouseCellPosition.x; x <= (int)mouseCellPos.x; x++)
-            {
-                for (int y = (int)prevMouseCellPosition.y; y <= (int)mouseCellPos.y; y++)
-                {
-                    Debug.Log("positions: " + x + ", " + y);
-                    GameObject tile = new GameObject();
-                    //tile.AddComponent<SpriteRenderer>().sprite = green;
-                    tile.transform.position = MouseToTilePosition(new Vector3(x, y));
-                }
-            }
-            
-
-            //GameObject tile = new GameObject();
-            //tile.AddComponent<SpriteRenderer>().sprite = green;
-            //tile.transform.position = MouseToTilePosition(mouseCellPos);
-        }
-
-        //prevMouseCellPosition = mouseCellPos;
-    }
-
-    void HighlightIfMouseDown()
-    {
-        
     }
 
     public Vector3 MouseToTilePosition(Vector3 mousePosition)
@@ -124,9 +74,9 @@ public class GridController : MonoBehaviour
     private Vector3 GetMousePositionInGrid()
     {
         Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (grid.Width % 2 == 0)
+        if (grid.Width % 2 == 0 && grid.Height % 2 == 0)
             return new Vector3((Mathf.Ceil(mouse.x) + (grid.Width - 1) / 2), (Mathf.Ceil(mouse.y) + (grid.Height - 1) / 2));
-        else
+        else if (grid.Width % 2 != 0 && grid.Height % 2 != 0)
         {
             // add .5 necessary in this case since the mouse position can be above and below whole
             // number values. example: a block on position 0,0 has the values [-.5, .5] inside it.
@@ -137,41 +87,55 @@ public class GridController : MonoBehaviour
             // (if we didnt add .5 then Floor(-.4) would == -1 which would be incorrect).
             return new Vector3(Mathf.Floor(mouse.x + .5f) + (grid.Width - 1) / 2, Mathf.Floor(mouse.y + .5f) + (grid.Height - 1) / 2);
         }
+        else if (grid.Width % 2 == 0 && grid.Height % 2 != 0)
+        {
+            return new Vector3((Mathf.Ceil(mouse.x) + (grid.Width - 1) / 2), Mathf.Floor(mouse.y + .5f) + (grid.Height - 1) / 2);
+        }
+        else if (grid.Width % 2 != 0 && grid.Height % 2 == 0)
+        {
+            return new Vector3(Mathf.Floor(mouse.x + .5f) + (grid.Width - 1) / 2, Mathf.Ceil(mouse.y) + (grid.Height - 1) / 2);
+        }
+        else
+        {
+            Debug.Log("Test Game Grid because it is probably broken!");
+            return new Vector3((Mathf.Ceil(mouse.x) + (grid.Width - 1) / 2), (Mathf.Ceil(mouse.y) + (grid.Height - 1) / 2));
+        }
 
     }
 
-    private bool MouseClickWasInGrid(Vector3 MouseCellPos)
+    private bool MouseIsInGrid(Vector3 MouseCellPos)
     {
         return MouseCellPos.x >= 0 && MouseCellPos.x < grid.Width && MouseCellPos.y >= 0 && MouseCellPos.y < grid.Height;
     }
 
-    /*void OnGridCellUpdated(GridTile tile, GameObject go)
+    void OnGridCellUpdated(GridTile tile, GameObject goBorder, GameObject goTile)
     {
-        if (tile.TileBorder == GridTile.Border.yellow)
-        {
-            go.GetComponent<SpriteRenderer>().sprite = yellow;
-        }
-        else
-            go.GetComponent<SpriteRenderer>().sprite = black;
+        //if (tile.TileObject == tower[0])
+        //{
+        //goBorder.GetComponent<SpriteRenderer>().sprite = gridImage.GetComponent<SpriteRenderer>().sprite;
+        goTile.GetComponent<SpriteRenderer>().sprite = tower[0].GetComponent<SpriteRenderer>().sprite;
+        Debug.Log(goTile);
+        //go.GetComponent<SpriteRenderer>().sprite = ;
+        //}
+        //else
+        //    go.GetComponent<SpriteRenderer>().sprite = black; */
 
         //if (tile.TType == GridTile.TileType.green)
         //    go.GetComponent<SpriteRenderer>().sprite = green;
     }
 
-    void HighlightGridAtPos(Vector3 gridPos)
-    {
-        if (grid.GetTile((int)gridPos.x, (int)gridPos.y).TileBorder != GridTile.Border.yellow)
-        {
-            grid.SetTileBorder((int)gridPos.x, (int)gridPos.y, GridTile.Border.yellow);
-        }
-    }
     void HighlightGridWhenMousedOver()
     {
         mouseCellPos = GetMousePositionInGrid();
-        if (MouseClickWasInGrid(prevMouseCellPosition))
-            grid.SetTileBorder((int)prevMouseCellPosition.x, (int)prevMouseCellPosition.y, GridTile.Border.black);
-        if (MouseClickWasInGrid(mouseCellPos))
-            grid.SetTileBorder((int)mouseCellPos.x, (int)mouseCellPos.y, GridTile.Border.yellow);
+        highLightImage.transform.position = MouseToTilePosition(mouseCellPos);
+        if (MouseIsInGrid(mouseCellPos))
+        {
+            highLightImage.SetActive(true);
+        }
+        else
+        {
+            highLightImage.SetActive(false);
+        }
     }
-    */
+
 }
