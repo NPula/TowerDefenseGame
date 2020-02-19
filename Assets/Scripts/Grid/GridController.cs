@@ -9,11 +9,13 @@ public class GridController : MonoBehaviour
     public GameObject gridImage;
     public GameObject highLightImage;
     public GameObject[] tower;
+    public GameObject towerToPlace;
 
     private Vector3 mouseCellPos;          // The grid cell the mouse is currently in.
 
     void Start()
     {
+        towerToPlace = tower[GameManager.instance.towerSelection];
         highLightImage = Instantiate(highLightImage, transform.position, Quaternion.identity);
         highLightImage.SetActive(false);
 
@@ -65,12 +67,16 @@ public class GridController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        towerToPlace = tower[GameManager.instance.towerSelection];
         HighlightGridWhenMousedOver();
 
         if (Input.GetMouseButtonDown(0))
         {
             mouseCellPos = GetMousePositionInGrid();
-            grid.SetTileType((int)mouseCellPos.x, (int)mouseCellPos.y, tower[0]);
+            if (MouseIsInGrid(mouseCellPos))
+            {
+                grid.SetTileType((int)mouseCellPos.x, (int)mouseCellPos.y, tower[0]);
+            }
         }
     }
 
@@ -117,7 +123,8 @@ public class GridController : MonoBehaviour
 
     void OnGridCellUpdated(GridTile tile, GameObject goBorder, GameObject goTile)
     {
-        goTile.GetComponent<SpriteRenderer>().sprite = tower[0].GetComponent<SpriteRenderer>().sprite;
+        //goTile.GetComponent<SpriteRenderer>().sprite = tower[0].GetComponent<SpriteRenderer>().sprite;
+        goTile = Instantiate(towerToPlace, goTile.transform.position, Quaternion.identity);
         Debug.Log(goTile);
     }
 
@@ -135,4 +142,8 @@ public class GridController : MonoBehaviour
         }
     }
 
+    public void ChangeTower(int towerID)
+    {
+        towerToPlace = tower[towerID];
+    }
 }
