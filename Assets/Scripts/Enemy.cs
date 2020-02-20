@@ -8,13 +8,7 @@ public class Enemy : MonoBehaviour
     public Transform exitToMoveTo;
 
     public float health = 2f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         print("health: " + health);
@@ -25,7 +19,7 @@ public class Enemy : MonoBehaviour
         transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 
-    public void onHit(float dmg)
+    public void Hit(float dmg)
     {
         health -= dmg;
     }

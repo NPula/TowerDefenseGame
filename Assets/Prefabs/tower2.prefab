@@ -99,7 +99,7 @@ MonoBehaviour:
   projectile: {fileID: 317546970018730923, guid: cdba168526aa3e640aedcfbfd8e99c21,
     type: 3}
   enemyLockedOnto: {fileID: 0}
-  timeToWait: 1
+  timeToWait: 0.5
 --- !u!58 &-2595129454549385158
 CircleCollider2D:
   m_ObjectHideFlags: 0

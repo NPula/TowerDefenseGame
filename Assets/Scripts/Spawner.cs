@@ -8,13 +8,6 @@ public class Spawner : MonoBehaviour
     public float timer = 3;
     private float timeToWait = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-                
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (timeToWait >= timer)

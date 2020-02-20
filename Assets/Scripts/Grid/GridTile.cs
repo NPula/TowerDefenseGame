@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 
-public class GridTile //: MonoBehaviour
+public class GridTile
 {
     float x, y; // position of the tile in the grid
     Action<GridTile> cb;

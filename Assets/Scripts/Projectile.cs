@@ -9,24 +9,36 @@ public class Projectile : MonoBehaviour
     private GameObject target;
     private TowerController tower;
     public float dmg = 1;
-    Vector2 move;
-
-    private void Start()
-    {
-    }
+    Vector3 move;
+    
     void Update()
     {
-        Debug.Log("Target: " + target);
+        MoveProjectile();
+
+        // When the projectile leaves the screen destroy it.
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        if (screenPosition.y > Screen.height || screenPosition.y < 0)
+            Destroy(this.gameObject);
+        else if (screenPosition.x > Screen.width || screenPosition.x < 0)
+            Destroy(this.gameObject);
+    }
+
+    private void MoveProjectile()
+    {
         if (target != null)
         {
             // move the projectile    
-            move = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-            transform.position = move;
+            Vector2 calcHeading = target.transform.position - transform.position;
+            move = calcHeading.normalized;
+            Debug.Log("Move: " + move);
+            Debug.Log("target: " + target);
+            transform.position += move * speed * Time.deltaTime;
         }
         else
         {
             Debug.Log("move: " + move);
-            transform.Translate(move);
+            Vector3 m = move;
+            transform.position += m * speed * Time.deltaTime;
         }
     }
 
@@ -45,7 +57,7 @@ public class Projectile : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Debug.Log("Hit Enemy");
-            collision.GetComponent<Enemy>().onHit(dmg);
+            collision.GetComponent<Enemy>().Hit(dmg);
             Destroy(gameObject);
         }
     }
