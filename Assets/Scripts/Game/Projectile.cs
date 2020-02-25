@@ -27,16 +27,17 @@ public class Projectile : MonoBehaviour
     {
         if (target != null)
         {
+            Debug.Log(target.transform.position);
             // move the projectile    
             Vector2 calcHeading = target.transform.position - transform.position;
             move = calcHeading.normalized;
-            Debug.Log("Move: " + move);
-            Debug.Log("target: " + target);
+            //Debug.Log("Move: " + move);
+            //Debug.Log("target: " + target);
             transform.position += move * speed * Time.deltaTime;
         }
         else
         {
-            Debug.Log("move: " + move);
+            //Debug.Log("move: " + move);
             Vector3 m = move;
             transform.position += m * speed * Time.deltaTime;
         }
@@ -56,7 +57,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            Debug.Log("Hit Enemy");
+            //Debug.Log("Hit Enemy");
             collision.GetComponent<Enemy>().Hit(dmg);
             Destroy(gameObject);
         }

@@ -22,7 +22,6 @@ public class WorldGrid
             {
                 tiles[i, j] = new GridTile();
                 tiles[i, j].TileObject = null;
-                Debug.Log("added!");
             }
         }
     }
@@ -40,5 +39,10 @@ public class WorldGrid
     public void SetTileBorder(int x, int y, GameObject border)
     {
         tiles[x, y].TileBorder = border;
+    }
+
+    public void SetMapTile(int x, int y, GameObject mapTileType)
+    {
+        tiles[x, y].MapTile = mapTileType;
     }
 }

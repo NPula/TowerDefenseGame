@@ -19,6 +19,18 @@ public class TowerController : MonoBehaviour
 
     void Update()
     {
+        if (enemiesInRange[0] == null && enemiesInRange.Count > 0)
+        {
+            enemiesInRange.RemoveAt(0);
+            int num = Random.Range(0, enemiesInRange.Count - 1);
+            enemyLockedOnto = enemiesInRange[num];
+        }
+        else if (enemiesInRange != null)
+        {
+            //int num = Random.Range(0, enemiesInRange.Count - 1);
+            enemyLockedOnto = enemiesInRange[0];
+        }
+
         if (enemyLockedOnto != null)
         {
             if (timer >= timeToWait)
@@ -40,11 +52,17 @@ public class TowerController : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            enemyLockedOnto = collision.gameObject;
+            enemiesInRange.Add(collision.gameObject);
+            /*if (enemyLockedOnto == null)
+            {
+                enemyLockedOnto = collision.gameObject;
+                Debug.Log("Enemy Locked on to: " + enemyLockedOnto);
+            } */
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        enemiesInRange.Remove(collision.gameObject);
     }
 }

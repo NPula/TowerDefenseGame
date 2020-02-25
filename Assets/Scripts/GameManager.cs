@@ -6,7 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+
+    public GameObject[] mapTiles;
+    public GameObject currentTile;
     public int towerSelection;
+    
+    public enum Gamestate {edit, test, play}
+    public Gamestate gameState = Gamestate.play;
+
+    public string map = "assets/resources/map.txt";
 
     private void Awake()
     {
@@ -26,4 +34,23 @@ public class GameManager : MonoBehaviour
     {
         towerSelection = towerID;
     }
+
+    public void ChangeMapTile(string name)
+    {
+        for (int i = 0; i < mapTiles.Length; i++)
+        {
+            if (mapTiles[i].name == name)
+            {
+                currentTile = mapTiles[i];
+                i = mapTiles.Length;
+            }
+        }
+
+        Debug.Log(currentTile);
+    }
+
+    //public void DeleteTower()
+    //{
+
+    //}
 }

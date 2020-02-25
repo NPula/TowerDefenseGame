@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class GridTile
 {
-    float x, y; // position of the tile in the grid
+    public float x, y; // position of the tile in the grid
     Action<GridTile> cb;
-    private GameObject tileObject, tileBorder;
+    public bool tileInUse = false;
+    private GameObject tileObject, tileBorder, mapTile;
     public GameObject TileObject
     {
         get
@@ -42,6 +43,24 @@ public class GridTile
             if (old != tileObject)
             {
                 // Update Grid;
+                cb(this);
+            }
+        }
+    }
+
+    public GameObject MapTile
+    {
+        get
+        {
+            return mapTile;
+        }
+        set
+        {
+            GameObject old = mapTile;
+            mapTile = value;
+
+            if (old != mapTile)
+            {
                 cb(this);
             }
         }
