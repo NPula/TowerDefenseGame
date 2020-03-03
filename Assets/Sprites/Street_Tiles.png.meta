@@ -1,0 +1,1447 @@
+fileFormatVersion: 2
+guid: 276c9194ea719984ea90c1f89f268f4c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4080696884417351651
+    second: Street_Tiles_0
+  - first:
+      213: -3355101845727830240
+    second: Street_Tiles_1
+  - first:
+      213: -5810745679912769998
+    second: Street_Tiles_2
+  - first:
+      213: -6789168446422859735
+    second: Street_Tiles_3
+  - first:
+      213: 8617009008101677495
+    second: Street_Tiles_4
+  - first:
+      213: 8565263492010180625
+    second: Street_Tiles_5
+  - first:
+      213: 1408739937193241345
+    second: Street_Tiles_6
+  - first:
+      213: -575830982061683898
+    second: Street_Tiles_7
+  - first:
+      213: 1894254323736906878
+    second: Street_Tiles_8
+  - first:
+      213: 5966332364853248276
+    second: Street_Tiles_9
+  - first:
+      213: 6228557361240879226
+    second: Street_Tiles_10
+  - first:
+      213: 2220659409625788494
+    second: Street_Tiles_11
+  - first:
+      213: 9193535776234328848
+    second: Street_Tiles_12
+  - first:
+      213: -4489845046699229454
+    second: Street_Tiles_13
+  - first:
+      213: 8076306823502065236
+    second: Street_Tiles_14
+  - first:
+      213: 4547794527100588569
+    second: Street_Tiles_15
+  - first:
+      213: 8831772445632006913
+    second: Street_Tiles_16
+  - first:
+      213: 2003202931576571462
+    second: Street_Tiles_17
+  - first:
+      213: -5701594645860765693
+    second: Street_Tiles_18
+  - first:
+      213: -5527451255659706898
+    second: Street_Tiles_19
+  - first:
+      213: 4937984233009542695
+    second: Street_Tiles_20
+  - first:
+      213: -4090513995594610727
+    second: Street_Tiles_21
+  - first:
+      213: -2449263736004101445
+    second: Street_Tiles_22
+  - first:
+      213: 3772614255976913749
+    second: Street_Tiles_23
+  - first:
+      213: 4055628666518853891
+    second: Street_Tiles_24
+  - first:
+      213: -5290370057431192490
+    second: Street_Tiles_25
+  - first:
+      213: -4981335301632314607
+    second: Street_Tiles_26
+  - first:
+      213: 6405566894744578056
+    second: Street_Tiles_27
+  - first:
+      213: 907659399242158469
+    second: Street_Tiles_28
+  - first:
+      213: 3649956086162510224
+    second: Street_Tiles_29
+  - first:
+      213: 6523467916791350138
+    second: Street_Tiles_30
+  - first:
+      213: 980862792318685288
+    second: Street_Tiles_31
+  - first:
+      213: 4695380838314739749
+    second: Street_Tiles_32
+  - first:
+      213: -5300887563319939146
+    second: Street_Tiles_33
+  - first:
+      213: -1862458449423191300
+    second: Street_Tiles_34
+  - first:
+      213: 3617201115895034432
+    second: Street_Tiles_35
+  - first:
+      213: 4174648321567772148
+    second: Street_Tiles_36
+  - first:
+      213: -4439269414659794058
+    second: Street_Tiles_37
+  - first:
+      213: -8580308948264849377
+    second: Street_Tiles_38
+  - first:
+      213: 9448600439252643
+    second: Street_Tiles_39
+  - first:
+      213: 1619024326968304149
+    second: Street_Tiles_40
+  - first:
+      213: 3328999359950861605
+    second: Street_Tiles_41
+  - first:
+      213: 8650319994679486481
+    second: Street_Tiles_42
+  - first:
+      213: 5319530745011582150
+    second: Street_Tiles_43
+  - first:
+      213: 7163269364189837725
+    second: Street_Tiles_44
+  - first:
+      213: -8956791909887895701
+    second: Street_Tiles_45
+  - first:
+      213: -6429661868344515432
+    second: Street_Tiles_46
+  - first:
+      213: -8924826907844551622
+    second: Street_Tiles_47
+  - first:
+      213: 2691965962572720804
+    second: Street_Tiles_48
+  - first:
+      213: 1899933191952051267
+    second: Street_Tiles_49
+  - first:
+      213: -7525726997456913091
+    second: Street_Tiles_50
+  - first:
+      213: 1125667976995500410
+    second: Street_Tiles_51
+  - first:
+      213: -6173495271173459990
+    second: Street_Tiles_52
+  - first:
+      213: 4128556788478435374
+    second: Street_Tiles_53
+  - first:
+      213: -2873395074505241784
+    second: Street_Tiles_54
+  - first:
+      213: 1649209994977141417
+    second: Street_Tiles_55
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Street_Tiles_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 458
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10b248ddc37e57c0800000000000000
+      internalID: -4080696884417351651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 458
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f922cb5a84071d0800000000000000
+      internalID: -3355101845727830240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 458
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236e9ac37951c5fa0800000000000000
+      internalID: -5810745679912769998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 458
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920ccaeb44708c1a0800000000000000
+      internalID: -6789168446422859735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 458
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9dd3ab904c59770800000000000000
+      internalID: 8617009008101677495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 458
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11083e8e3cdedd670800000000000000
+      internalID: 8565263492010180625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 441
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b2f415289dc8310800000000000000
+      internalID: 1408739937193241345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 441
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b8c8fc5cc3208f0800000000000000
+      internalID: -575830982061683898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 441
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c0690754eb94a10800000000000000
+      internalID: 1894254323736906878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 441
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4118ef2ccabacc250800000000000000
+      internalID: 5966332364853248276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 441
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7038e37be7407650800000000000000
+      internalID: 6228557361240879226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 441
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40bfdda7fd51de10800000000000000
+      internalID: 2220659409625788494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013da4c3410069f70800000000000000
+      internalID: 9193535776234328848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fef1fed7bdd0b1c0800000000000000
+      internalID: -4489845046699229454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_14
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e67ef044ec41070800000000000000
+      internalID: 8076306823502065236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_15
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912db43f6030d1f30800000000000000
+      internalID: 4547794527100588569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b8afe1f32c09a70800000000000000
+      internalID: 8831772445632006913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_17
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64684ade37ecccb10800000000000000
+      internalID: 2003202931576571462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_18
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3003330c0eddfd0b0800000000000000
+      internalID: -5701594645860765693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5cd116e5c8a43b0800000000000000
+      internalID: -5527451255659706898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_20
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72673035f7e378440800000000000000
+      internalID: 4937984233009542695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_21
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7c1d781339b37c0800000000000000
+      internalID: -4090513995594610727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_22
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbaba3edb97720ed0800000000000000
+      internalID: -2449263736004101445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b141a7da40b5430800000000000000
+      internalID: 3772614255976913749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_24
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3095fb8d8cc784830800000000000000
+      internalID: 4055628666518853891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_25
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c637c5674d496b0800000000000000
+      internalID: -5290370057431192490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_26
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113b7177fedbedab0800000000000000
+      internalID: -4981335301632314607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_27
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808a042172525e850800000000000000
+      internalID: 6405566894744578056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_28
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5819fd42a67a89c00800000000000000
+      internalID: 907659399242158469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_29
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091dd79d8bf37a230800000000000000
+      internalID: 3649956086162510224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_30
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73810ce183088a50800000000000000
+      internalID: 6523467916791350138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_31
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8609d854389bc9d00800000000000000
+      internalID: 980862792318685288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_32
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5280de8cef7592140800000000000000
+      internalID: 4695380838314739749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_33
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 407
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf6702b8d67f66b0800000000000000
+      internalID: -5300887563319939146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_34
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2b43178e73726e0800000000000000
+      internalID: -1862458449423191300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_35
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042f11a0041e23230800000000000000
+      internalID: 3617201115895034432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_36
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd4a3db7845fe930800000000000000
+      internalID: 4174648321567772148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_37
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b52f4dcfb8462c0800000000000000
+      internalID: -4439269414659794058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_38
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f107193d87e9ce880800000000000000
+      internalID: -8580308948264849377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_39
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a66ec8b371912000800000000000000
+      internalID: 9448600439252643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_40
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51269a32c0ee77610800000000000000
+      internalID: 1619024326968304149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_41
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525bf53b74bf23e20800000000000000
+      internalID: 3328999359950861605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_42
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118645c243c1c0870800000000000000
+      internalID: 8650319994679486481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_43
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c43f2c4705c2d940800000000000000
+      internalID: 5319530745011582150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_44
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 390
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9939fab88b096360800000000000000
+      internalID: 7163269364189837725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b671a0c863513b380800000000000000
+      internalID: -8956791909887895701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_46
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8946377b89045c6a0800000000000000
+      internalID: -6429661868344515432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_47
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cd31c8635a42480800000000000000
+      internalID: -8924826907844551622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_48
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aae692c7c8cb5520800000000000000
+      internalID: 2691965962572720804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_49
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ca64bfb2bed5a10800000000000000
+      internalID: 1899933191952051267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_50
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d73083b2f3f8790800000000000000
+      internalID: -7525726997456913091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_51
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7179df9f0d2f9f00800000000000000
+      internalID: 1125667976995500410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_52
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefe62b62c6535aa0800000000000000
+      internalID: -6173495271173459990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_53
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20e84c66849b4930800000000000000
+      internalID: 4128556788478435374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_54
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b02c45766af18d0800000000000000
+      internalID: -2873395074505241784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_Tiles_55
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 373
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2e2a6a0cb23e610800000000000000
+      internalID: 1649209994977141417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,10 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-
     public GameObject[] mapTiles;
     public GameObject currentTile;
-    public int towerSelection;
+    public int towerSelection = -1;
     
     public enum Gamestate {edit, test, play}
     public Gamestate gameState = Gamestate.play;
@@ -27,9 +26,7 @@ public class GameManager : MonoBehaviour
             Destroy(instance);
         }
     }
-    private void Start()
-    {
-    }
+
     public void ChangeTower(int towerID)
     {
         towerSelection = towerID;
@@ -48,9 +45,4 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(currentTile);
     }
-
-    //public void DeleteTower()
-    //{
-
-    //}
 }

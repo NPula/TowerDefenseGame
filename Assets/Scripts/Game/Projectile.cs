@@ -15,29 +15,20 @@ public class Projectile : MonoBehaviour
     {
         MoveProjectile();
 
-        // When the projectile leaves the screen destroy it.
-        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        if (screenPosition.y > Screen.height || screenPosition.y < 0)
-            Destroy(this.gameObject);
-        else if (screenPosition.x > Screen.width || screenPosition.x < 0)
-            Destroy(this.gameObject);
+        DestroyWhenLeavePlayArea();
     }
 
     private void MoveProjectile()
     {
         if (target != null)
         {
-            Debug.Log(target.transform.position);
             // move the projectile    
             Vector2 calcHeading = target.transform.position - transform.position;
             move = calcHeading.normalized;
-            //Debug.Log("Move: " + move);
-            //Debug.Log("target: " + target);
             transform.position += move * speed * Time.deltaTime;
         }
         else
         {
-            //Debug.Log("move: " + move);
             Vector3 m = move;
             transform.position += m * speed * Time.deltaTime;
         }
@@ -53,11 +44,24 @@ public class Projectile : MonoBehaviour
         target = _target;
     }
 
+    private void DestroyWhenLeavePlayArea()
+    {
+        // When the enemy leaves the screen destroy it.
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        if (screenPosition.y > Screen.height || screenPosition.y < 0)
+        {
+            Destroy(this.gameObject);
+        }
+        else if (screenPosition.x > Screen.width || screenPosition.x < 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
-            //Debug.Log("Hit Enemy");
             collision.GetComponent<Enemy>().Hit(dmg);
             Destroy(gameObject);
         }

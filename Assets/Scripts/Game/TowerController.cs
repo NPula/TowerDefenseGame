@@ -5,9 +5,9 @@ using UnityEngine;
 public class TowerController : MonoBehaviour
 {
     public GameObject projectile;
-    List<GameObject> allProjectiles;
-    List<GameObject> enemiesInRange;
-    public GameObject enemyLockedOnto; // public in case we want enemies that force a tower to lock onto them. (multiplayer?)
+    private List<GameObject> enemiesInRange;
+    public GameObject enemyLockedOnto; 
+
     private float timer = 0f;
     public float timeToWait = 1f;
 
@@ -19,16 +19,23 @@ public class TowerController : MonoBehaviour
 
     void Update()
     {
-        if (enemiesInRange[0] == null && enemiesInRange.Count > 0)
+        // only run if the is something in the list.
+        if (enemiesInRange.Count > 0)
         {
-            enemiesInRange.RemoveAt(0);
-            int num = Random.Range(0, enemiesInRange.Count - 1);
-            enemyLockedOnto = enemiesInRange[num];
-        }
-        else if (enemiesInRange != null)
-        {
-            //int num = Random.Range(0, enemiesInRange.Count - 1);
-            enemyLockedOnto = enemiesInRange[0];
+            if (enemiesInRange[0] == null)
+            {
+                enemiesInRange.RemoveAt(0);
+                int num = Random.Range(0, enemiesInRange.Count - 1);
+                enemyLockedOnto = enemiesInRange[num];
+            }
+            else
+            {
+                enemyLockedOnto = enemiesInRange[0];
+            }
+
+            Vector3 distance = (enemiesInRange[0].transform.position - transform.position).normalized;
+            float angle = (Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg);
+            transform.rotation = Quaternion.Euler(0f, 0f, 90 + angle);
         }
 
         if (enemyLockedOnto != null)
@@ -53,11 +60,6 @@ public class TowerController : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             enemiesInRange.Add(collision.gameObject);
-            /*if (enemyLockedOnto == null)
-            {
-                enemyLockedOnto = collision.gameObject;
-                Debug.Log("Enemy Locked on to: " + enemyLockedOnto);
-            } */
         }
     }
 

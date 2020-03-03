@@ -5,28 +5,38 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 1f;
-    public Transform exitToMoveTo;
+    //public Transform exitToMoveTo;
+    
+    private float offsetArea = 50f; // for allowing enemies to spawn off the map a little
 
-    public float health = 2f;
+    public float health = 1f;
 
-    void Update()
+    private void Update()
     {
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
-        // When the enemy leaves the screen destroy it.
-        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        if (screenPosition.y > Screen.height || screenPosition.y < 0)
-            Destroy(this.gameObject);
-        else if (screenPosition.x > Screen.width || screenPosition.x < 0)
-            Destroy(this.gameObject);
+        DestroyWhenLeavePlayArea();
     }
 
     public void Hit(float dmg)
     {
         health -= dmg;
+    }
+
+    private void DestroyWhenLeavePlayArea()
+    {
+        // When the enemy leaves the screen destroy it.
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        if (screenPosition.y > Screen.height + offsetArea || screenPosition.y < 0 - offsetArea)
+        {
+            Destroy(this.gameObject);
+        }
+        else if (screenPosition.x > Screen.width + offsetArea || screenPosition.x < 0 - offsetArea)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
